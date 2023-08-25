@@ -42,4 +42,4 @@ class BooksSpider(scrapy.Spider):
         book_item['num_reviews']: table_rows[6].css('td::text').get()
         book_item['star_rating']: response.css('p.star-rating').attrib['class']
         
-        yield BookItem
+        yield book_item
